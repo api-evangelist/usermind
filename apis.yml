@@ -1,8 +1,23 @@
 aid: usermind
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/usermind.png
 name: Usermind
-description: Usermind is a company surfaced as a portfolio company of a16z, menlo-ventures and added to
-  the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment
-  pipeline.
+description: Usermind was a Seattle-based journey and experience orchestration platform
+  that captured and analyzed contextual data at every touchpoint of the customer journey
+  to personalize experiences across channels, and was named a Leader in The Forrester
+  Wave Journey Orchestration Platforms, Q2 2020. Backed by a16z and Menlo Ventures,
+  the company was acquired by Qualtrics (announced July 20, 2021); usermind.com now
+  redirects to qualtrics.com and no independent Usermind API surface remains.
 url: https://raw.githubusercontent.com/api-evangelist/usermind/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,11 +26,25 @@ x-backed-by:
 - menlo-ventures
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-status: acquired
+x-acquired-by: qualtrics
+x-acquisition-announced: '2021-07-20'
+x-acquisition-source: https://www.qualtrics.com/news/qualtrics-acquires-usermind/
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 5
+  pass: local-v1
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
+- Customer Journey
+- Journey Orchestration
+- Customer Experience
+- Marketing Technology
+- Acquired
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -23,5 +52,13 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: VulnerabilityDisclosure
+  url: security/usermind-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/usermind-domain-security.yml
+- type: WellKnown
+  url: well-known/usermind-well-known.yml
+- type: LLMsTxt
+  url: llms/usermind-llms.txt
 - type: Website
   url: https://usermind.com

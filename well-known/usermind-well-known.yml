@@ -1,0 +1,35 @@
+generated: '2026-07-21'
+method: searched
+host: https://usermind.com
+note: >-
+  usermind.com no longer serves its own site. Port 443 is unreachable and
+  http://usermind.com returns 301 to https://www.qualtrics.com/ (Usermind was
+  acquired by Qualtrics, announced 2021-07-20). Well-known paths are redirected
+  into the qualtrics.com surface, so the one 200 document below is Qualtrics's
+  security.txt served after a cross-domain redirect - it belongs to the
+  acquirer, not to an independent Usermind surface.
+probes:
+  - path: /
+    scheme: https
+    status: unreachable
+    detail: TLS connection to usermind.com:443 failed (curl exit 7)
+  - path: /
+    scheme: http
+    status: 301
+    redirect: https://www.qualtrics.com/
+documents:
+  - path: /.well-known/security.txt
+    status: 200
+    final_url: https://www.qualtrics.com/.well-known/security.txt
+    file: usermind-security.txt
+    owner: qualtrics.com (acquirer)
+  - path: /.well-known/openid-configuration
+    status: 200
+    final_url: https://www.qualtrics.com/.well-known/security.txt
+    note: redirected to security.txt, not a real OIDC discovery document
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404

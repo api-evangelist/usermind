@@ -1,0 +1,18 @@
+# Usermind
+
+> Usermind was a Seattle-based journey / experience orchestration platform that captured and
+> analyzed contextual data across customer-journey touchpoints. It was named a Leader in The
+> Forrester Wave: Journey Orchestration Platforms, Q2 2020. Qualtrics announced its acquisition
+> of Usermind on July 20, 2021; usermind.com now redirects to qualtrics.com and no independent
+> Usermind API surface remains.
+
+## Status
+
+- Acquired by Qualtrics (announced 2021-07-20): https://www.qualtrics.com/news/qualtrics-acquires-usermind/
+- Former website (now redirects to the acquirer): https://usermind.com
+
+## Profile
+
+- [APIs.json profile](https://raw.githubusercontent.com/api-evangelist/usermind/refs/heads/main/apis.yml): API Evangelist network profile for Usermind
+- [Well-known probe index](https://raw.githubusercontent.com/api-evangelist/usermind/refs/heads/main/well-known/usermind-well-known.yml): what usermind.com serves today
+- [Domain security probe](https://raw.githubusercontent.com/api-evangelist/usermind/refs/heads/main/security/usermind-domain-security.yml): TLS/DNS posture of the residual domain
